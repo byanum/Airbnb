@@ -6,6 +6,7 @@ import Post from "./src/components/Post";
 import feed from "./assets/data/feed";
 import PostScreen from "./src/screens/PostScreen";
 import DestinationScreen from "./src/screens/DestinationScreen";
+import GuestScreen from "./src/screens/Guest";
 
 // const feeds = feed[0];
 
@@ -14,7 +15,8 @@ export default function App() {
     <SafeAreaView>
       {/* <HomeScreen /> */}
       {/* <PostScreen /> */}
-      <DestinationScreen />
+      {/* <DestinationScreen /> */}
+      <GuestScreen />
       <StatusBar style="auto" />
     </SafeAreaView>
   );
