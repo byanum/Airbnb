@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     textDecorationLine: "underline",
     fontSize: 16,
     fontWeight: "300",
+    color: "gray",
   },
 });
 

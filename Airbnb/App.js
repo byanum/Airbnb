@@ -3,11 +3,16 @@ import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 import HomeScreen from "./src/screens/HomeScreen";
 import Post from "./src/components/Post";
 
+import feed from "./assets/data/feed";
+
+const feeds = feed;
+
 export default function App() {
   return (
     <SafeAreaView>
       {/* <HomeScreen /> */}
-      <Post />
+      <Post feeds={feeds[0]} />
+      <Post feeds={feeds[1]} />
       <StatusBar style="auto" />
     </SafeAreaView>
   );
