@@ -4,15 +4,15 @@ import HomeScreen from "./src/screens/HomeScreen";
 import Post from "./src/components/Post";
 
 import feed from "./assets/data/feed";
+import PostScreen from "./src/screens/PostScreen";
 
-const feeds = feed;
+// const feeds = feed[0];
 
 export default function App() {
   return (
     <SafeAreaView>
       {/* <HomeScreen /> */}
-      <Post feeds={feeds[0]} />
-      <Post feeds={feeds[1]} />
+      <PostScreen />
       <StatusBar style="auto" />
     </SafeAreaView>
   );

@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./styles";
 
 const Post = ({ feeds }) => {
-  console.log(feeds);
+  // console.log(feeds);
 
   return (
     <View style={styles.container}>
