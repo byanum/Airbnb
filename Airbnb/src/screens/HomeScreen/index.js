@@ -22,7 +22,7 @@ const HomeScreen = () => {
 
       {/* image */}
       <ImageBackground
-        source={require("../../assets/wallpaper.jpg")}
+        source={require("../../../assets/wallpaper.jpg")}
         style={styles.image}
       >
         {/* Title */}
