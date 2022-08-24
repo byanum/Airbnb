@@ -1,10 +1,17 @@
-import { View, Text, TextInput, FlatList } from "react-native";
+import { View, Text, TextInput, FlatList, Pressable } from "react-native";
 import React, { useState } from "react";
 import styles from "./styles";
 import { FontAwesome5 } from "@expo/vector-icons";
 import search from "../../../assets/data/search";
+import { useNavigation } from "@react-navigation/native";
+import GuestScreen from "../Guest";
 
 const DestinationScreen = () => {
+  const navigation = useNavigation();
+
+  const nextScreen = () => {
+    navigation.navigate("GuestScreen");
+  };
   // states
   const [inputText, setInputText] = useState("");
 
@@ -21,12 +28,12 @@ const DestinationScreen = () => {
       <FlatList
         data={search}
         renderItem={({ item }) => (
-          <View style={styles.row}>
+          <Pressable onPress={nextScreen} style={styles.row}>
             <View style={styles.iconContainer}>
               <FontAwesome5 name="map-marker-alt" size={24} color="#354259" />
             </View>
             <Text style={styles.locationTxt}>{item.description}</Text>
-          </View>
+          </Pressable>
         )}
       />
     </View>

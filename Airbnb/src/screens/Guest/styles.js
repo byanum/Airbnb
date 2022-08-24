@@ -1,9 +1,11 @@
 import { StyleSheet, Dimensions } from "react-native";
 
 const styles = StyleSheet.create({
-  container: {
-    margin: 10,
+  topContainer: {
+    height: "100%",
+    justifyContent: "space-between",
   },
+
   rowAdult: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -110,6 +112,15 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   signTxt: {},
+  searchBtn: {
+    marginBottom: 20,
+    backgroundColor: "lightblue",
+    height: 50,
+    marginHorizontal: 20,
+    marginTop: 20,
+    justifyContent: "center",
+    alignItems: "center",
+  },
 });
 
 export default styles;

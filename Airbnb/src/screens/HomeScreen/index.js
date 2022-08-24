@@ -2,14 +2,17 @@ import { View, Text, ImageBackground, Pressable } from "react-native";
 import React from "react";
 import styles from "./styles";
 import { Feather } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
+
   const explore = () => {
     console.warn("Explore");
   };
 
   const search = () => {
-    console.warn("Search");
+    navigation.navigate("DestinationScreen");
   };
   return (
     <View>

@@ -30,71 +30,79 @@ const GuestScreen = () => {
     setCountInfant(Math.max(0, countInfant - 1));
   };
   return (
-    <View>
-      {/* row 1: adult */}
-      <View style={styles.rowAdult}>
-        {/* title */}
-        <View style={styles.txtAdult}>
-          <Text style={styles.headerAdult}>Adults</Text>
-          <Text style={styles.ageAdult}>Ages 13 or above</Text>
+    <View styles={styles.topContainer}>
+      <View>
+        {/* row 1: adult */}
+        <View style={styles.rowAdult}>
+          {/* title */}
+          <View style={styles.txtAdult}>
+            <Text style={styles.headerAdult}>Adults</Text>
+            <Text style={styles.ageAdult}>Ages 13 or above</Text>
+          </View>
+          {/* button */}
+          <View style={styles.btnAdult}>
+            <Pressable style={styles.btn} onPress={subAdult}>
+              <Text style={styles.signTxt}>-</Text>
+            </Pressable>
+
+            {/* number */}
+            <Text style={styles.countAdult}>{countAdult}</Text>
+
+            <Pressable style={styles.btn} onPress={addAdult}>
+              <Text style={styles.signTxt}>+</Text>
+            </Pressable>
+          </View>
         </View>
-        {/* button */}
-        <View style={styles.btnAdult}>
-          <Pressable style={styles.btn} onPress={subAdult}>
-            <Text style={styles.signTxt}>-</Text>
-          </Pressable>
 
-          {/* number */}
-          <Text style={styles.countAdult}>{countAdult}</Text>
+        {/* row 2: children */}
+        <View style={styles.rowChildren}>
+          {/* title */}
+          <View style={styles.txtChildren}>
+            <Text style={styles.headerChildren}>Childrens</Text>
+            <Text style={styles.ageChildren}>Ages 13 or above</Text>
+          </View>
+          {/* button */}
+          <View style={styles.btnChildren}>
+            <Pressable style={styles.btn} onPress={subChildren}>
+              <Text style={styles.signTxt}>-</Text>
+            </Pressable>
 
-          <Pressable style={styles.btn} onPress={addAdult}>
-            <Text style={styles.signTxt}>+</Text>
-          </Pressable>
+            {/* number */}
+            <Text style={styles.countChildren}>{countChildren}</Text>
+
+            <Pressable style={styles.btn} onPress={addChildren}>
+              <Text style={styles.signTxt}>+</Text>
+            </Pressable>
+          </View>
+        </View>
+        {/* row 3: guest */}
+        <View style={styles.rowInfant}>
+          {/* title */}
+          <View style={styles.txtInfant}>
+            <Text style={styles.headerInfant}>Infants</Text>
+            <Text style={styles.ageInfant}>Ages 13 or above</Text>
+          </View>
+          {/* button */}
+          <View style={styles.btnInfant}>
+            <Pressable style={styles.btn} onPress={subInfant}>
+              <Text style={styles.signTxt}>-</Text>
+            </Pressable>
+
+            {/* number */}
+            <Text style={styles.countInfant}>{countInfant}</Text>
+
+            <Pressable style={styles.btn} onPress={addInfant}>
+              <Text style={styles.signTxt}>+</Text>
+            </Pressable>
+          </View>
         </View>
       </View>
 
-      {/* row 2: children */}
-      <View style={styles.rowChildren}>
-        {/* title */}
-        <View style={styles.txtChildren}>
-          <Text style={styles.headerChildren}>Childrens</Text>
-          <Text style={styles.ageChildren}>Ages 13 or above</Text>
-        </View>
-        {/* button */}
-        <View style={styles.btnChildren}>
-          <Pressable style={styles.btn} onPress={subChildren}>
-            <Text style={styles.signTxt}>-</Text>
-          </Pressable>
+      {/* search button */}
 
-          {/* number */}
-          <Text style={styles.countChildren}>{countChildren}</Text>
-
-          <Pressable style={styles.btn} onPress={addChildren}>
-            <Text style={styles.signTxt}>+</Text>
-          </Pressable>
-        </View>
-      </View>
-      {/* row 3: guest */}
-      <View style={styles.rowInfant}>
-        {/* title */}
-        <View style={styles.txtInfant}>
-          <Text style={styles.headerInfant}>Infants</Text>
-          <Text style={styles.ageInfant}>Ages 13 or above</Text>
-        </View>
-        {/* button */}
-        <View style={styles.btnInfant}>
-          <Pressable style={styles.btn} onPress={subInfant}>
-            <Text style={styles.signTxt}>-</Text>
-          </Pressable>
-
-          {/* number */}
-          <Text style={styles.countInfant}>{countInfant}</Text>
-
-          <Pressable style={styles.btn} onPress={addInfant}>
-            <Text style={styles.signTxt}>+</Text>
-          </Pressable>
-        </View>
-      </View>
+      <Pressable style={styles.searchBtn}>
+        <Text>Search</Text>
+      </Pressable>
     </View>
   );
 };
