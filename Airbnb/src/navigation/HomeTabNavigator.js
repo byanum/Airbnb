@@ -12,7 +12,7 @@ const Tab = createMaterialBottomTabNavigator();
 const HomeTabNavigator = () => {
   return (
     <Tab.Navigator
-      tabBarOptions={{
+      screenOptions={{
         activeTintColor: "white",
       }}
     >
