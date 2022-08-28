@@ -1,8 +1,11 @@
 import { View, Text, Pressable } from "react-native";
 import React, { useState } from "react";
 import styles from "./styles";
+import { useNavigation } from "@react-navigation/native";
 
 const GuestScreen = () => {
+  const navigation = useNavigation();
+
   const [countAdult, setCountAdult] = useState(0);
   const [countChildren, setCountChildren] = useState(0);
   const [countInfant, setCountInfant] = useState(0);
@@ -100,7 +103,17 @@ const GuestScreen = () => {
 
       {/* search button */}
 
-      <Pressable style={styles.searchBtn}>
+      <Pressable
+        onPress={() =>
+          navigation.navigate("Welcome", {
+            screen: "Explore",
+            params: {
+              screen: "PostScreen",
+            },
+          })
+        }
+        style={styles.searchBtn}
+      >
         <Text>Search</Text>
       </Pressable>
     </View>

@@ -5,6 +5,8 @@ import HomeScreen from "../screens/HomeScreen";
 import { Ionicons } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
+import ExploreNavigator from "./ExploreNavigator";
+
 const Tab = createMaterialBottomTabNavigator();
 
 const HomeTabNavigator = () => {
@@ -16,7 +18,7 @@ const HomeTabNavigator = () => {
     >
       <Tab.Screen
         name={"Explore"}
-        component={HomeScreen}
+        component={ExploreNavigator}
         options={{
           tabBarIcon: ({ color }) => (
             <Ionicons name="search" size={24} color={color} />
