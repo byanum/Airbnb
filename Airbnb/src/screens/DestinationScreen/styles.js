@@ -2,19 +2,21 @@ import { StyleSheet, Dimensions } from "react-native";
 
 const styles = StyleSheet.create({
   input: {
-    fontSize: 16,
+    fontSize: 20,
     marginBottom: 20,
   },
   container: {
     margin: 10,
   },
+  autoPlace: {
+    height: 500,
+  },
   row: {
+    marginTop: 10,
     flexDirection: "row",
     alignItems: "center", //upper niche
     marginVertical: 10,
     paddingVertical: 15,
-    borderBottomWidth: 1,
-    borderColor: "lightgrey",
   },
   locationTxt: {},
   iconContainer: {

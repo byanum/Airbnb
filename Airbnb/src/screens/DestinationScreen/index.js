@@ -4,38 +4,39 @@ import styles from "./styles";
 import { FontAwesome5 } from "@expo/vector-icons";
 import search from "../../../assets/data/search";
 import { useNavigation } from "@react-navigation/native";
-import GuestScreen from "../Guest";
+import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
+import SuggestionRow from "./SuggestionRow";
 
 const DestinationScreen = () => {
+  // states
+  const [inputText, setInputText] = useState("");
   const navigation = useNavigation();
 
   const nextScreen = () => {
     navigation.navigate("GuestScreen");
   };
-  // states
-  const [inputText, setInputText] = useState("");
-
   return (
     <View style={styles.container}>
       {/* input */}
-      <TextInput
-        style={styles.input}
-        placeholder="Where are you going?"
-        value={inputText}
-        onChangeText={setInputText}
-      />
-      {/* list of destinations */}
-      <FlatList
-        data={search}
-        renderItem={({ item }) => (
-          <Pressable onPress={nextScreen} style={styles.row}>
-            <View style={styles.iconContainer}>
-              <FontAwesome5 name="map-marker-alt" size={24} color="#354259" />
-            </View>
-            <Text style={styles.locationTxt}>{item.description}</Text>
-          </Pressable>
-        )}
-      />
+      <View style={styles.autoPlace}>
+        <GooglePlacesAutocomplete
+          placeholder="where are you going?"
+          style={styles.input}
+          onPress={(data, details = null) => {
+            // 'details' is provided when fetchDetails = true
+            console.log(data, details);
+            navigation.navigate("GuestScreen");
+          }}
+          fetchDetails //give the cords of the location
+          query={{
+            key: "AIzaSyChcwIGUDhRXxSarNcfZxf_kaL_fii7gLI",
+            language: "en",
+            type: "(cities)",
+          }}
+          // suppressDefaultStyles
+          renderRow={(item) => <SuggestionRow item={item} />}
+        />
+      </View>
     </View>
   );
 };
