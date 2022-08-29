@@ -16,6 +16,10 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     borderColor: "grey",
   },
+  carousel: {
+    position: "absolute",
+    bottom: 10,
+  },
 });
 
 export default styles;

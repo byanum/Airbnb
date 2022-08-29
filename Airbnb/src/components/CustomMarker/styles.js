@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
 
   marker: {
     backgroundColor: "white",
-    padding: 5,
+    padding: 10,
     borderWidth: 1,
     borderRadius: 20,
     borderColor: "grey",
