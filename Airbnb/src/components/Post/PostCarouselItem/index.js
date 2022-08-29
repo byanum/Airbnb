@@ -1,30 +1,50 @@
-import { View, Text, Image } from "react-native";
 import React from "react";
-import styles from "./../styles";
+import {
+  View,
+  Text,
+  Image,
+  useWindowDimensions,
+  Pressable,
+} from "react-native";
+import styles from "./styles";
+import { useNavigation } from "@react-navigation/native";
 
 const PostCarousel = ({ feeds }) => {
-  // console.log(feeds);
+  const width = useWindowDimensions().width;
+
+  const navigation = useNavigation();
+
+  const goToPostPage = () => {
+    navigation.navigate("Post", { postId: post.id });
+  };
 
   return (
-    <View style={styles.container}>
-      {/* image */}
-      <Image style={styles.img} source={{ uri: feeds.image }} />
-      {/* bedroom */}
-      <Text style={styles.bedroom}>
-        {feeds.bed} bed {feeds.bedroom} bedroom
-      </Text>
-      {/* description */}
-      <Text style={styles.description}>
-        {feeds.type} &#8226; {feeds.title}
-      </Text>
-      {/* old/new price */}
-      <Text style={styles.prices}>
-        <Text style={styles.oldPrice}>${feeds.oldPrice}</Text>
-        <Text style={styles.newPrice}> ${feeds.newPrice}</Text>/ night
-      </Text>
-      {/* total price */}
-      <Text style={styles.totalPrice}> ${feeds.totalPrice}</Text>
-    </View>
+    <Pressable
+      onPress={goToPostPage}
+      style={[styles.container, { width: width - 60 }]}
+    >
+      <View style={styles.innerContainer}>
+        {/* Image  */}
+        <Image style={styles.image} source={{ uri: feeds.image }} />
+
+        <View style={{ flex: 1, marginHorizontal: 10 }}>
+          {/* Bed & Bedroom  */}
+          <Text style={styles.bedrooms}>
+            {feeds.bed} bed {feeds.bedroom} bedroom
+          </Text>
+
+          {/* Type & Description */}
+          <Text style={styles.description} numberOfLines={2}>
+            {feeds.type}. {feeds.title}
+          </Text>
+
+          {/*  Old price & new price */}
+          <Text style={styles.prices}>
+            <Text style={styles.price}>${feeds.newPrice} </Text>/ night
+          </Text>
+        </View>
+      </View>
+    </Pressable>
   );
 };
 
