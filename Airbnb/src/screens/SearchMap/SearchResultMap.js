@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, FlatList, useWindowDimensions } from "react-native";
 import React, { useState } from "react";
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import styles from "./styles";
@@ -8,6 +8,7 @@ import PostCarousel from "../../components/Post/PostCarouselItem";
 import feed from "../../../assets/data/feed";
 const SearchResultMap = () => {
   const [selectedPlaceId, setSelectedPlaceId] = useState(null);
+  const width = useWindowDimensions().width;
   return (
     <View style={styles.container}>
       <MapView
@@ -32,7 +33,15 @@ const SearchResultMap = () => {
       </MapView>
 
       <View style={styles.carousel}>
-        <PostCarousel feeds={feed[0]} />
+        <FlatList
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          snapToInterval={width - 60}
+          snapToAlignment={"center"}
+          decelerationRate={"fast"}
+          data={feed}
+          renderItem={({ item }) => <PostCarousel feeds={item} />}
+        />
       </View>
     </View>
   );
