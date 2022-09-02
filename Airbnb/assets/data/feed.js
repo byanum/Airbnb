@@ -9,6 +9,8 @@ export default [
     oldPrice: 25,
     newPrice: 20,
     totalPrice: 120,
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nihildicta laudantium ea repudiandae minima deserunt cum iusto earum,recusandae asperiores. Corrupti tenetur omnis, odio inventore quia sintut doloribus? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nihildicta laudantium ea repudiandae minima deserunt cum iusto earum,recusandae asperiores. Corrupti tenetur omnis, odio inventore quia sintut doloribus? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nihildicta laudantium ea repudiandae minima deserunt cum iusto earum,recusandae asperiores. Corrupti tenetur omnis, odio inventore quia sintut doloribus?",
     coordinate: {
       latitude: 37.773972,
       longitude: -122.431297,
@@ -24,6 +26,8 @@ export default [
     oldPrice: 76,
     newPrice: 65,
     totalPrice: 390,
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nihildicta laudantium ea repudiandae minima deserunt cum iusto earum,recusandae asperiores. Corrupti tenetur omnis, odio inventore quia sintut doloribus?",
     coordinate: {
       latitude: 37.769662,
       longitude: -122.469323,
@@ -39,6 +43,8 @@ export default [
     oldPrice: 64,
     newPrice: 55,
     totalPrice: 330,
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nihildicta laudantium ea repudiandae minima deserunt cum iusto earum,recusandae asperiores. Corrupti tenetur omnis, odio inventore quia sintut doloribus?",
     coordinate: {
       latitude: 37.769662,
       longitude: -122.471429,
@@ -54,6 +60,8 @@ export default [
     oldPrice: 120,
     newPrice: 100,
     totalPrice: 600,
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nihildicta laudantium ea repudiandae minima deserunt cum iusto earum,recusandae asperiores. Corrupti tenetur omnis, odio inventore quia sintut doloribus?",
     coordinate: {
       latitude: 37.770901,
       longitude: -122.472749,

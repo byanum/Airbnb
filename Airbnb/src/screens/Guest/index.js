@@ -105,7 +105,7 @@ const GuestScreen = () => {
 
       <Pressable
         onPress={() =>
-          navigation.navigate("Welcome", {
+          navigation.navigate("HomeTabNavigator", {
             screen: "Explore",
             params: {
               screen: "PostScreen",

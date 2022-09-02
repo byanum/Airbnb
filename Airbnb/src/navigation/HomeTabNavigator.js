@@ -6,7 +6,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import ExploreNavigator from "./ExploreNavigator";
-
+import DetailedPostScreen from "../screens/DetailedPostScreen";
 const Tab = createMaterialBottomTabNavigator();
 
 const HomeTabNavigator = () => {

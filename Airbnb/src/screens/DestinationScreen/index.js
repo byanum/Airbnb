@@ -24,7 +24,7 @@ const DestinationScreen = () => {
           style={styles.input}
           onPress={(data, details = null) => {
             // 'details' is provided when fetchDetails = true
-            console.log(data, details);
+            // console.log(data, details);
             navigation.navigate("GuestScreen");
           }}
           fetchDetails //give the cords of the location

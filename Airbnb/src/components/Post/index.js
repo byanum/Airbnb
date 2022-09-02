@@ -1,12 +1,17 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, Pressable } from "react-native";
 import React from "react";
 import styles from "./styles";
-
+import { useNavigation } from "@react-navigation/native";
 const Post = ({ feeds }) => {
   // console.log(feeds);
 
+  const navigation = useNavigation();
+  const gotToPage = () => {
+    navigation.navigate("Post", { feedId: feeds.id });
+  };
+
   return (
-    <View style={styles.container}>
+    <Pressable style={styles.container} onPress={gotToPage}>
       {/* image */}
       <Image style={styles.img} source={{ uri: feeds.image }} />
       {/* bedroom */}
@@ -24,7 +29,7 @@ const Post = ({ feeds }) => {
       </Text>
       {/* total price */}
       <Text style={styles.totalPrice}> ${feeds.totalPrice}</Text>
-    </View>
+    </Pressable>
   );
 };
 

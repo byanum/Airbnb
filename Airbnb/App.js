@@ -8,16 +8,15 @@ import feed from "./assets/data/feed";
 import PostScreen from "./src/screens/PostScreen";
 import DestinationScreen from "./src/screens/DestinationScreen";
 import GuestScreen from "./src/screens/Guest";
-
-import Router from "./src/navigation/index";
+import RootNavigator from "./src/navigation/RootNavigator";
 // const feeds = feed[0];
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Router />
+    <>
       <StatusBar style="auto" />
-    </NavigationContainer>
+      <RootNavigator />
+    </>
   );
 }
 

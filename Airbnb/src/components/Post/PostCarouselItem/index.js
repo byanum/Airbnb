@@ -15,7 +15,7 @@ const PostCarousel = ({ feeds }) => {
   const navigation = useNavigation();
 
   const goToPostPage = () => {
-    navigation.navigate("Post", { postId: post.id });
+    navigation.navigate("Post", { feedId: feeds.id });
   };
 
   return (
